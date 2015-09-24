@@ -1,0 +1,160 @@
+
+
+@media (max-width: 799px){
+	   
+        html,body {
+            height:100%;
+        }
+        #wrapper2 {
+            min-height:100%;
+        }
+         #header2 {
+            display:block;
+        }
+         #section2 {
+            overflow: auto;
+            width:100%;
+			margin-top:20%;
+			
+        }
+         #footer2 {
+			  border: 1px solid transparent;
+              position: relative;
+			  margin-top: -50px;
+			  height: 50px;
+			  padding: 10px 0px;
+			  clear: both;
+			  background-color: #f8f8f8;
+              border-color: #e7e7e7;
+			  border-radius: 4px;
+			  text-align: center;
+			  color: #777;
+			  
+        }
+		.imagen{
+		
+			width:80%;
+			
+			
+        }
+		
+	    #logo{
+			width:100%;
+			height:100px;
+		    position: absolute; 		 
+		    top: 70px;
+		    z-index: 1;
+		
+		}
+		
+		.linea{
+			width:100%;
+			height:70%;
+		    position: absolute; 		 
+		    top: 35px;
+		    z-index: 1;
+		    background-color:#F63;
+		}
+		.linea-imagen {
+		  position: absolute; 		 
+		  z-index: 2;
+		  margin-left:40%;
+		}
+		#fondo-imagen{
+		 
+		
+		}
+		#logo-linea{
+		  
+		}
+		
+}
+
+
+@media (min-width:600px){
+	     
+		  * {
+            margin: 0;
+            padding: 0;
+        }
+        html,body {
+            height:100%;
+        }
+        /* Div que engloba el contenido de la página menos el footer */
+        #wrapper2 {
+            min-height:100%;
+        }
+         #header2 {
+            display:block;
+            /*background:#ccc;
+            padding:10px 0px;*/
+        }
+         #section2 {
+            overflow: auto;
+            height:100%;
+            width:100%;
+        }
+         #footer2 {
+			  border: 1px solid transparent;
+              position: relative;
+			  margin-top: -50px;
+			  height: 50px;
+			  padding: 10px 0px;
+			  clear: both;
+			  background-color: #f8f8f8;
+              border-color: #e7e7e7;
+			  border-radius: 4px;
+			  text-align: center;
+			  color: #777;
+			  
+        }
+ 
+       
+         #define2 {
+            width:960px;
+            margin:0 auto;
+        }
+		.imagen{
+		
+			width:100%;
+			height:50%;
+			
+        }
+		
+         #logo{
+			width:100%;
+			height:100px;
+		    position: absolute; 		 
+		    top: 90px;
+		    z-index: 1;
+		
+		}
+		
+		.linea{
+			width:100%;
+			height:100px;
+		    position: absolute; 		 
+		    top: 35px;
+		    z-index: 1;
+		    background-color:#F63;
+		}
+		.linea-imagen{			
+		    position: absolute; 		 
+		    z-index: 2;
+			left:50%;			
+		}
+		
+		#fondo-imagen{
+		 
+		
+		}
+		
+		#logo-linea{
+		
+		}
+}
+
+/*mobile-portrait: min:320px - max:479px;
+mobile-landscape: min:480px - max:599px;
+small-tablet-portrait: min:600px - max:799px;
+small-tablet-landscape: min:800px - max:767px;*/

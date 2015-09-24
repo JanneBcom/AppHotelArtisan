@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="css/tablacss.css">
+<link rel="stylesheet" href="css/app.v1.css">
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="js/datepicker/datepicker.css" type="text/css" />
+
+ <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+<style type="text/css">
+ 
+
+html,
+body {
+    height: 100%;
+}
+ 
+
+ 
+#header2 {
+    /* ... */
+}
+ 
+
+ 
+#footer2 {
+	border: 1px solid transparent;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #f8f8f8;
+    border-color: #e7e7e7;
+	border-radius: 4px;
+	text-align: center;
+	color: #777;
+	padding: 10px 0px;
+}
+.sombra{
+	ba(153,142,153,1);
+-moz-box-shadow: 0px 4px 31px 2px rgba(153,142,153,1);
+box-shadow: 0px 4px 31px 2px rgba(153,142,153,1);
+}
+.logo-cabecera{
+	position: absolute;
+    z-index: 9999;
+    left: 40%;
+    top: 5%;
+}
+.logo-mexico{
+	position: absolute;
+    z-index: 9999;
+    left: 25%;
+    top: 9%;
+}
+.logo-estados-unidos{
+	position: absolute;
+    z-index: 9999;
+    left: 50%;
+    top: 9%;
+}
+.linea{
+	position: absolute;
+    z-index: 9999;
+  /*  left: 40%;*/
+    top: 8%;
+	width:100%;
+	height:50px;
+	/*background-color:#FE3801;*/
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#FE3801+0,FE3801+50,FE3801+51,FE3801+100 */
+background: #FE3801; /* Old browsers */
+background: -moz-linear-gradient(left,  #FE3801 0%, #FE3801 50%, #FE3801 51%, #FE3801 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,#FE3801), color-stop(50%,#FE3801), color-stop(51%,#FE3801), color-stop(100%,#FE3801)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left,  #FE3801 0%,#FE3801 50%,#FE3801 51%,#FE3801 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left,  #FE3801 0%,#FE3801 50%,#FE3801 51%,#FE3801 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left,  #FE3801 0%,#FE3801 50%,#FE3801 51%,#FE3801 100%); /* IE10+ */
+background: linear-gradient(to right,  #FE3801 0%,#FE3801 50%,#FE3801 51%,#FE3801 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FE3801', endColorstr='#FE3801',GradientType=1 ); /* IE6-9 */
+-webkit-box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.75);
+box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.75);
+border-left:0px;
+border-right:0px;
+
+}
+.sombra-imagen{
+	-webkit-box-shadow: -1px -7px 33px -8px rgba(0,0,0,0.75);
+	-moz-box-shadow: -1px -7px 33px -8px rgba(0,0,0,0.75);
+	box-shadow: -1px -7px 33px -8px rgba(0,0,0,0.75);
+/*	border-radius: 75px;*/
+/*	-moz-border-radius: 75px;
+	-webkit-border-radius: 75px;*/
+	border-color:#FE3801;
+	border-style: solid;
+	border-width: 1px;
+	
+	 width: 60%;
+     height: 60%;
+     -moz-border-radius: 50%;
+     -webkit-border-radius: 50%;
+     border-radius: 50%;
+     background: #f3f0da;
+}
+
+</style>
+
+<link rel="stylesheet" type="text/css" href="css/dienciones.css" />
+<link rel="stylesheet" type="text/css" href="ParallaxContentSlider/css/demo.css" />
+<link rel="stylesheet" type="text/css" href="ParallaxContentSlider/css/style.css" />
+<script type="text/javascript" src="ParallaxContentSlider/js/modernizr.custom.28468.js"></script>
+<link rel='stylesheet' type='text/css' href='ParallaxContentSlider/css/css.css?family=Economica:700,400italic'>
+		<noscript>
+			<link rel="stylesheet" type="text/css" href="ParallaxContentSlider/css/nojs.css" />
+</noscript>
+ <style>
+ 
+
+ </style>
+ <script>
+function pasaslider(pregunta,value,divactual,divsiguiente){
+ /*alert("background-position: 550% 0%;");*/
+
+ 
+ 
+ if(pregunta=="pregunta1")
+ {
+	document.getElementById('da-slider').style.backgroundPosition = "50% 0%"; 
+    document.getElementById(divactual).className = "da-slide da-slide-toleft";
+    document.getElementById(divsiguiente).className = "da-slide da-slide-fromright da-slide-current";
+	document.getElementById("pregunta1").value = value;
+	document.getElementById("previo1").style.display = "block"; 
+	
+ }
+ if(pregunta=="pregunta2")
+ {
+	document.getElementById('da-slider').style.backgroundPosition = "100% 0%"; 
+    document.getElementById(divactual).className = "da-slide da-slide-toleft";
+    document.getElementById(divsiguiente).className = "da-slide da-slide-fromright da-slide-current";
+	document.getElementById("pregunta2").value = value;
+	document.getElementById("previo1").style.display = "none"; 
+	document.getElementById("previo2").style.display = "block";
+	 
+ }
+ if(pregunta=="pregunta3")
+ {
+	document.getElementById('da-slider').style.backgroundPosition = "150% 0%"; 
+    document.getElementById(divactual).className = "da-slide da-slide-toleft";
+    document.getElementById(divsiguiente).className = "da-slide da-slide-fromright da-slide-current";
+	document.getElementById("pregunta3").value = value;
+	document.getElementById("previo2").style.display = "none"; 
+	document.getElementById("previo3").style.display = "block"; 
+	
+ }
+ if(pregunta=="pregunta4")
+ {
+	document.getElementById('da-slider').style.backgroundPosition = "200% 0%"; 
+    document.getElementById(divactual).className = "da-slide da-slide-toleft";
+    document.getElementById(divsiguiente).className = "da-slide da-slide-fromright da-slide-current";
+	document.getElementById("pregunta4").value = value;
+	document.getElementById("previo3").style.display = "none"; 
+	document.getElementById("previo4").style.display = "block"; 
+	
+ }
+ if(pregunta=="pregunta5")
+ {
+	document.getElementById('da-slider').style.backgroundPosition = "250% 0%"; 
+    document.getElementById(divactual).className = "da-slide da-slide-toleft";
+    document.getElementById(divsiguiente).className = "da-slide da-slide-fromright da-slide-current";
+	var per = document.getElementById("pregunta5").value = value;
+	document.getElementById("previo4").style.display = "none"; 
+	document.getElementById("previo5").style.display = "block"; 
+	
+ }
+ if(pregunta=="pregunta6")
+ {
+	document.getElementById('da-slider').style.backgroundPosition = "300% 0%"; 
+    document.getElementById(divactual).className = "da-slide da-slide-toleft";
+    document.getElementById(divsiguiente).className = "da-slide da-slide-fromright da-slide-current";
+	var per = document.getElementById("pregunta6").value;
+	document.getElementById("previo5").style.display = "none"; 
+	document.getElementById("previo6").style.display = "block"; 
+	
+ }
+ if(pregunta=="pregunta7")
+ {
+	 document.getElementById('da-slider').style.backgroundPosition = "350% 0%"; 
+    document.getElementById(divactual).className = "da-slide da-slide-toleft";
+    document.getElementById(divsiguiente).className = "da-slide da-slide-fromright da-slide-current";
+	var per = document.getElementById("pregunta7").value;
+	document.getElementById("previo6").style.display = "none"; 
+	document.getElementById("previo7").style.display = "block"; 
+	
+ }
+ if(pregunta=="pregunta8")
+ {
+	 document.getElementById('da-slider').style.backgroundPosition = "400% 0%"; 
+    document.getElementById(divactual).className = "da-slide da-slide-toleft";
+    document.getElementById(divsiguiente).className = "da-slide da-slide-fromright da-slide-current";
+	var per = document.getElementById("pregunta8").value;
+	document.getElementById("previo7").style.display = "none"; 
+	document.getElementById("previo8").style.display = "block"; 
+	
+ }
+ 
+ if(pregunta=="consulta")
+ {
+	 document.getElementById('da-slider').style.backgroundPosition = "400% 0%"; 
+    document.getElementById(divactual).className = "da-slide da-slide-toleft";
+    document.getElementById(divsiguiente).className = "da-slide da-slide-fromright da-slide-current";
+	
+	 
+ }
+
+}
+
+function previo(pregunta,divactual,divsiguiente){
+
+
+ if(pregunta=="pregunta1")
+ {
+	document.getElementById('da-slider').style.backgroundPosition = "0% 0%";
+    document.getElementById(divactual).className = "da-slide da-slide-fromleft da-slide-current";
+    document.getElementById(divsiguiente).className = "da-slide da-slide-toright";
+	document.getElementById("pregunta1").value = ""; 
+	document.getElementById("previo1").style.display = "none"; 
+ }
+ if(pregunta=="pregunta2")
+ {
+	document.getElementById('da-slider').style.backgroundPosition = "50% 0%";
+    document.getElementById(divactual).className = "da-slide da-slide-fromleft da-slide-current";
+    document.getElementById(divsiguiente).className = "da-slide da-slide-toright";
+	document.getElementById("pregunta2").value = ""; 
+	document.getElementById("previo1").style.display = "block";
+	document.getElementById("previo2").style.display = "none"; 
+	 
+ }
+ if(pregunta=="pregunta3")
+ {
+	document.getElementById('da-slider').style.backgroundPosition = "100% 0%";
+    document.getElementById(divactual).className = "da-slide da-slide-fromleft da-slide-current";
+    document.getElementById(divsiguiente).className = "da-slide da-slide-toright";
+	document.getElementById("pregunta3").value = ""; 
+	document.getElementById("previo2").style.display = "block";
+	document.getElementById("previo3").style.display = "none"; 
+	 
+ }
+ if(pregunta=="pregunta4")
+ {
+	document.getElementById('da-slider').style.backgroundPosition = "150% 0%";
+    document.getElementById(divactual).className = "da-slide da-slide-fromleft da-slide-current";
+    document.getElementById(divsiguiente).className = "da-slide da-slide-toright";
+	document.getElementById("pregunta4").value = ""; 
+	document.getElementById("previo3").style.display = "block";
+	document.getElementById("previo4").style.display = "none"; 
+	 
+ }
+ if(pregunta=="pregunta5")
+ {
+	document.getElementById('da-slider').style.backgroundPosition = "200% 0%";
+    document.getElementById(divactual).className = "da-slide da-slide-fromleft da-slide-current";
+    document.getElementById(divsiguiente).className = "da-slide da-slide-toright";
+	document.getElementById("pregunta5").value = ""; 
+	document.getElementById("previo4").style.display = "block";
+	document.getElementById("previo5").style.display = "none"; 
+	 
+ }
+ if(pregunta=="pregunta6")
+ {
+	document.getElementById('da-slider').style.backgroundPosition = "250% 0%";
+    document.getElementById(divactual).className = "da-slide da-slide-fromleft da-slide-current";
+    document.getElementById(divsiguiente).className = "da-slide da-slide-toright";
+	document.getElementById("pregunta6").value = ""; 
+	document.getElementById("previo5").style.display = "block";
+	document.getElementById("previo6").style.display = "none"; 
+	 
+ }
+ if(pregunta=="pregunta7")
+ {
+	 document.getElementById('da-slider').style.backgroundPosition = "300% 0%";
+    document.getElementById(divactual).className = "da-slide da-slide-fromleft da-slide-current";
+    document.getElementById(divsiguiente).className = "da-slide da-slide-toright";
+	document.getElementById("pregunta7").value = ""; 
+	document.getElementById("previo6").style.display = "block";
+	document.getElementById("previo7").style.display = "none"; 
+	 
+ }
+ if(pregunta=="pregunta8")
+ {
+	 document.getElementById('da-slider').style.backgroundPosition = "350% 0%";
+    document.getElementById(divactual).className = "da-slide da-slide-fromleft da-slide-current";
+    document.getElementById(divsiguiente).className = "da-slide da-slide-toright";
+	document.getElementById("pregunta8").value = ""; 
+	document.getElementById("previo7").style.display = "block";
+	document.getElementById("previo8").style.display = "none"; 
+	 
+ }
+ 
+ 
+
+}
+ </script> 
+ 
+<link rel="stylesheet" href="js/jquery.mobile-1.3.2.min.css"> 
+<script src="js/jquery.js"></script>
+<script src="js/jquery.mobile-1.3.2.min.js"></script>
+<script type="text/javascript" src="phonegap.js"></script>
+<script type="text/javascript">
+
+document.addEventListener("deviceready",onDeviceReady,false);
+
+var db;
+	function checkConnection() {
+            var networkState = navigator.connection.type;
+
+            var states = {};
+            states[Connection.UNKNOWN]  = 'Unknown connection';
+            states[Connection.ETHERNET] = 'Ethernet connection';
+            states[Connection.WIFI]     = 'WiFi connection';
+            states[Connection.CELL_2G]  = 'Cell 2G connection';
+            states[Connection.CELL_3G]  = 'Cell 3G connection';
+            states[Connection.CELL_4G]  = 'Cell 4G connection';
+            states[Connection.CELL]     = 'Cell generic connection';
+            states[Connection.NONE]     = 'No network connection';
+
+            alert('Connection type: ' + states[networkState]);
+        }
+	
+	function onDeviceReady()
+	{
+	   db = window.openDatabase("Database","1.0","Cordova Demo",2*1024*1024);	
+	   db.transaction(createDB,errorCB);
+	}
+	
+	function createDB(tx)
+	{
+	tx.executeSql('CREATE TABLE IF NOT EXISTS ENCUESTAS (pregunta1,pregunta2,pregunta3,pregunta4,pregunta5,pregunta6)');
+		
+	}
+	
+	function errorCB(err)
+	{
+		 alert("Error procesando SQL: " + err.code);
+	}
+	
+	function successCB()
+	{
+		 alert("Correcto");
+	}
+	
+	function successRegistro()
+	{
+		 alert("Gracias");
+		    var per1 = document.getElementById("pregunta1");
+			var per2 = document.getElementById("pregunta2");
+			var per3 = document.getElementById("pregunta3");
+			var per4 = document.getElementById("pregunta4");
+			var per5 = document.getElementById("pregunta5");
+			var per6 = document.getElementById("pregunta6");
+		    per1.value = "";
+			per2.value = "";
+			per3.value = "";
+			per4.value = "";
+			per5.value = "";
+			per6.value = "";
+					  
+			 document.getElementById('da-slider').style.backgroundPosition = "50% 0%";
+			 document.getElementById("siete").className = "da-slide da-slide-toleft";
+			 document.getElementById("uno").className = "da-slide da-slide-fromright da-slide-current";
+			 document.getElementById("previo6").style.display = "none"; 
+		 //$("#form")[0].reset();
+	}
+	
+	function insertDB(tx)
+	{
+		var pregunta1 = $("[name='pregunta1']").val();
+		var pregunta2 = $("[name='pregunta2']").val();
+		var pregunta3 = $("[name='pregunta3']").val();
+		var pregunta4 = $("[name='pregunta4']").val();
+		var pregunta5 = $("[name='pregunta5']").val();
+		var pregunta6 = $("[name='pregunta6']").val();
+		
+		 
+		 if(pregunta1!="")
+		 {
+		 
+		 var sql = 'INSERT INTO ENCUESTAS (pregunta1,pregunta2,pregunta3,pregunta4,pregunta5,pregunta6) VALUES(?,?,?,?,?,?)';
+		 tx.executeSql(sql, [pregunta1,pregunta2,pregunta3,pregunta4,pregunta5,pregunta6], successRegistro, errorCB);
+		 }
+		 else
+		 {
+			 alert("Campo nombre esta vacio");
+		 }
+		  /*var sql = 'INSERT INTO ENCUESTAS (nombre,escuela,tel,correo) VALUES(?,?,?,?)';
+		 tx.executeSql(sql, [nombre,escuela,tel,correo], sucessQueryDB, errorCB);*/
+		 
+		 
+		 
+	}
+	
+	function sucessQueryDB(tx)
+	{
+		//alert("query");
+		tx.executeSql('SELECT * FROM ENCUESTAS', [], renderList, errorCB);
+	}
+	
+	function renderList(tx,results)
+	{
+		var htmlstring="";
+		var len = results.rows.length;
+		htmlstring += "<tr class='Cabecera'>";
+		htmlstring += "<th>pregunta1</th>";
+		htmlstring += "<th>pregunta2</th>";
+		htmlstring += "<th>pregunta3</th>";
+		htmlstring += "<th>pregunta4</th>";
+		htmlstring += "<th>pregunta5</th>";
+		htmlstring += "<th>pregunta6</th>";
+		htmlstring += "</tr>";
+		
+		var stylo ="";
+		for(var i=0;i<len; i++)
+		{
+			if(stylo=="texto1")
+			{
+				stylo="texto2";
+			}
+			else
+			{
+				stylo="texto1";
+			}
+			
+			htmlstring += "<tr class='"+stylo+"'>";
+			htmlstring += "<td>" + results.rows.item(i).pregunta1 + "</td>";
+			htmlstring += "<td>" + results.rows.item(i).pregunta2 + "</td>";
+			htmlstring += "<td>" + results.rows.item(i).pregunta3 + "</td>";
+			htmlstring += "<td>" + results.rows.item(i).pregunta4 + "</td>";
+			htmlstring += "<td>" + results.rows.item(i).pregunta5 + "</td>";
+			htmlstring += "<td>" + results.rows.item(i).pregunta6 + "</td>";
+			htmlstring += '</tr>';
+		}
+		
+		$('#resultList').html(htmlstring);
+		<!--$('#resultList').listview('refresh');-->
+		
+	}
+	
+	function subirQueryDB(tx)
+	{
+		//alert("query");
+		document.getElementById("carga_loading").style.display="block";
+		tx.executeSql('SELECT * FROM ENCUESTAS', [], subirrenderList, errorCB);
+		
+	}
+	
+	function alertEliminar()
+	{
+		 document.getElementById("carga_loading").style.display="none";
+	}
+	
+	function eliminarQueryDB(tx)
+	{
+		//alert("query");
+		tx.executeSql('DELETE FROM ENCUESTAS', [], alertEliminar, errorCB);
+	}
+	
+	function subirrenderList(tx,results)
+	{
+		
+		
+			
+		
+		
+		
+		
+		document.getElementById("envia").style.display="none";
+		document.getElementById("carga_loading").style.display="block";
+		var len = results.rows.length;
+		
+		var pregunta1 = "";
+		var pregunta2 = "";
+		var pregunta3 = "";
+		var pregunta4 = "";	
+		var pregunta5 = "";
+		var pregunta6 = "";
+		
+		
+		for(var i=0;i<len; i++)
+		{
+			if(i==len-1)
+			{
+				pregunta1+= results.rows.item(i).pregunta1;
+                pregunta2+= results.rows.item(i).pregunta2;
+			    pregunta3+= results.rows.item(i).pregunta3;
+			    pregunta4+= results.rows.item(i).pregunta4;
+				pregunta5+= results.rows.item(i).pregunta5;
+			    pregunta6+= results.rows.item(i).pregunta6;
+			}
+			else
+			{
+			    pregunta1+= results.rows.item(i).pregunta1 + ",";
+                pregunta2+= results.rows.item(i).pregunta2+ ",";
+			    pregunta3+= results.rows.item(i).pregunta3+ ",";
+			    pregunta4+= results.rows.item(i).pregunta4+ ",";
+				pregunta5+= results.rows.item(i).pregunta5+ ",";
+			    pregunta6+= results.rows.item(i).pregunta6+ ",";
+			}
+            
+			
+			 
+			
+			
+		}
+		
+	
+		    
+		
+		//archivoValidacion = "http://promocionesveracruzanas.dnsalias.com:5000/demo/envios_datos.php?jsoncallback=?"
+		archivoValidacion = "http://www.hotelboutiquemym.com/envios_json/envios_datos.php?jsoncallback=?"
+         if(pregunta1!="")
+		 {
+	       $.getJSON( archivoValidacion, { pregunta1:pregunta1 ,pregunta2:pregunta2,pregunta3:pregunta3,pregunta4:pregunta4,pregunta5:pregunta5,pregunta6:pregunta6})
+	      .done(function(respuestaServer) {
+		
+		        //alert(respuestaServer.mensaje + "\nGenerado en: " + respuestaServer.hora + "\n" +respuestaServer.generador)
+		
+		         if(respuestaServer.validacion == "ok")
+				 {
+		 	       /// si la validacion es correcta, muestra la pantalla "home"
+			     	 //$.mobile.changePage("#home")
+					 alert("Datos enviados");
+					 db.transaction(eliminarQueryDB,errorCB);
+					 document.getElementById("envia").style.display="block";
+		             document.getElementById("carga_loading").style.display="none";
+					 $.mobile.changePage( "#page2",{ reverse: true, transition: "slide" });
+		             return false;
+					 
+					
+		         }
+				 else
+				 {		  
+		                /// ejecutar una conducta cuando la validacion falla
+						document.getElementById("carga_loading").style.display="none";
+						alert("Error al envio");
+		         }
+  
+	})
+
+		 }
+		 else
+		 {
+			 document.getElementById("envia").style.display="block";
+			 document.getElementById("carga_loading").style.display="none";
+			alert("No hay datos por enviar");
+		 }
+		
+		
+	}
+	
+	function subeConinternet()
+	{
+		var pregunta1 = document.getElementById("pregunta1").value;
+		var pregunta2 = document.getElementById("pregunta2").value;
+		var pregunta3 = document.getElementById("pregunta3").value;
+		var pregunta4 = document.getElementById("pregunta4").value;
+		var pregunta5 = document.getElementById("pregunta5").value;
+		var pregunta6 = document.getElementById("pregunta6").value;
+		
+	  archivoValidacion = "http://www.hotelboutiquemym.com/envios_json/envios_datos.php?jsoncallback=?"
+         if(pregunta1!="")
+		 {
+	       $.getJSON( archivoValidacion, { pregunta1:pregunta1 ,pregunta2:pregunta2,pregunta3:pregunta3,pregunta4:pregunta4,pregunta5:pregunta5,pregunta6:pregunta6})
+	      .done(function(respuestaServer) {
+		
+		        //alert(respuestaServer.mensaje + "\nGenerado en: " + respuestaServer.hora + "\n" +respuestaServer.generador)
+		
+		         if(respuestaServer.validacion == "ok")
+				 {
+		 	       /// si la validacion es correcta, muestra la pantalla "home"
+			     	 //$.mobile.changePage("#home")
+					 alert("Datos enviados");
+				     successRegistro()
+					 
+					
+		           
+					 
+					
+		         }
+				 else
+				 {		  
+		                /// ejecutar una conducta cuando la validacion falla
+						
+						alert("Error al envio");
+		         }
+  
+	})
+
+		 }
+		 else
+		 {
+			 document.getElementById("envia").style.display="block";
+			 document.getElementById("carga_loading").style.display="none";
+			alert("No hay datos por enviar");
+		 }	
+	}
+	
+	function submitForm()
+	{
+		if(navigator.network.connection.type == Connection.NONE)
+		{
+			// No tenemos conexión
+			db.transaction(insertDB,errorCB);
+			
+		}
+		else
+		{
+			// Si tenemos conexión
+			subeConinternet();
+			alert("SI ahi señal de internet");
+		}
+				
+				
+	
+	}
+	
+	function inicio()
+	{
+		//$("#form")[0].reset();
+		$.mobile.changePage( "#page",{ reverse: false, transition: "slide" });
+		return false;
+	
+	}
+	
+	function registrar()
+	{
+		//$("#form")[0].reset();
+		$.mobile.changePage( "#page2",{ reverse: false, transition: "slide" });
+		return false;
+	
+	}
+	
+	function consultar()
+	{
+		db.transaction(sucessQueryDB,errorCB);
+		$.mobile.changePage( "#page3",{ reverse: false, transition: "slide" });
+		return false;
+	}
+	
+	function subirDatos()
+	{
+	
+
+		if(navigator.network.connection.type == Connection.NONE)
+		{
+			alert("No se tiene conexion a internet");
+		}
+		else
+		{
+			db.transaction(subirQueryDB,errorCB);
+			return false;
+		}
+	}
+	
+	
+	
+ </script>       
+</head>
+
+<body>
+
+  
+<div data-role="page" class="type-interior" id="page">
+
+<div data-role="content" class="ui-content">
+
+<div class="container" style="min-height: 100%;">
+			<!-- Codrops top bar -->
+            <div class="codrops-top" style="background:none !important;box-shadow:none !important;">
+    <a href="#page" onClick="inicio();"><img src="imagenes/home.png" style="position:absolute;left:5%;top:20px;"></a>
+    <a href="#page3" onClick="consultar();"><img src="imagenes/home.png" style="position:absolute;left:10%;top:20px;"></a>
+               
+                <div class="clr"></div>
+            </div><!--/ Codrops top bar -->
+			<header class="dimenciones-ipad"></header>
+           <div id="cuerpo">
+           <div class="linea"></div>
+           <div class="imagenes-cabecera">
+           <table>
+           <tr>
+           
+           <td><a href="#page2" onClick="registrar();"><img src="imagenes/mexico_flag_256.png" style="margin-bottom:25px;"></a></td>
+           <td><img src="imagenes/logo2.png" id="logo-encuesta" class="sombra-imagen"></td>
+           <td><a href="#"><img src="imagenes/flag_usa.png" style="margin-bottom:25px;"></a></td>
+           </tr>
+           </table>
+           </div>
+
+           <div class="sombra">
+			<div id="da-slider-principal" class="da-slider" style="box-shadow: 0px 1px 0px #FE3801, 0px -1px 0px #FE3801;">
+				<div class="da-slide">
+					<h2>Artisan Playa Esmeralda</h2>
+					<!--<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.</p>  -->                 
+					<div class="da-img2-inicio" ><img src="imagenes/slider-artisan-rm01.jpg" alt="image01" /></div>
+				</div>
+				<div class="da-slide">                    
+					<h2>Artisan Playa Esmeralda</h2>
+				<!--	<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>	-->				
+                    <div class="da-img2-inicio" ><img src="imagenes/slider-artisan-rm03.jpg" alt="image01" /></div>
+				</div>
+				<div class="da-slide">
+					<h2>Artisan Playa Esmeralda</h2>
+					<!--<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>-->					
+					<div class="da-img2-inicio" ><img src="imagenes/slider-artisan-rm04.jpg" alt="image01" /></div>
+				</div>
+				<div class="da-slide">
+					<h2>Artisan Playa Esmeralda</h2>
+					<!--<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>-->				
+					<div class="da-img2-inicio" >
+                    <img src="imagenes/index-slider-1.jpg" alt="image01" /></div>
+				</div>
+
+                
+			</div>
+            </div>
+           
+            </div>
+        </div>
+</div>
+</div>
+
+
+           
+        
+<div data-role="page" class="type-interior" id="page2" data-add-back-btn="true">
+	<!--<div data-role="header" data-theme="f" role="banner" >   
+		<h1 class="ui-title" role="heading" aria-level="1">Modulo de Encuestas</h1>				
+	</div> -->  
+    
+     
+	<div data-role="content" class="ui-content">
+    
+     <div class="title"></div>
+
+            <div class="navigation" id="nav">
+                
+               <div class="container" style="min-height: 100%;">
+			<!-- Codrops top bar -->
+            <div class="codrops-top" style="background:none !important;box-shadow:none !important;">
+   <a href="#page" onClick="inicio();"><img src="imagenes/home.png" style="position:absolute;left:5%;top:20px;"></a>
+   <a href="#page3" onClick="consultar();"><img src="imagenes/home.png" style="position:absolute;left:10%;top:20px;"></a>
+              
+                <div class="clr"></div>
+            </div><!--/ Codrops top bar -->
+			<header class="dimenciones-ipad">
+				
+			</header>
+           <div id="cuerpo">
+           <div class="linea"></div>
+           <div class="imagenes-cabecera">
+           <table>
+           <tr>
+           <td><a href="#page2" onClick="registrar();"><img src="imagenes/mexico_flag_256.png" style="margin-bottom:25px;"></a></td>
+           <td><img src="imagenes/logo2.png" id="logo-encuesta"  class="sombra-imagen"></td>
+           <td><a href="#"><img src="imagenes/flag_usa.png" style="margin-bottom:25px;"></a></td>
+           </tr>
+           </table>
+           </div>
+           <!--<div class="logo-estados-unidos"><a href="#"><img src="imagenes/flag_usa.png" width="15%"></a></div>
+           <div class="logo-mexico"><a href="encuesta.html"><img src="imagenes/mexico_flag_256.png" width="15%"></a></div>
+           <div class="logo-cabecera"><img src="imagenes/logo2.png" width="70%" class="sombra-imagen"></div>-->
+           <div class="sombra">
+			<div id="da-slider" class="da-slider" style="box-shadow: 0px 1px 0px #FE3801, 0px -1px 0px #FE3801;">
+				<div class="da-slide" id="uno">
+					<h2>1.-¿Comó califica el servicio de nuestros colaboradores?</h2>
+					<!--<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.</p>-->
+                    <div class="da-tabla">
+                    <table width="100%">
+                    <tr>
+					<td><div class="botones"><a href="#"  onClick="pasaslider('pregunta1','Excelente','uno','dos');">Excelente</a></div></td>
+                    <td><div class="botones"><a href="#"  onClick="pasaslider('pregunta1','Bueno','uno','dos');">Bueno</a></div></td>
+                    <td><div class="botones"><a href="#"  onClick="pasaslider('pregunta1','Malo','uno','dos');">Malo</a></div></td>
+                    <td><input type="hidden" id="pregunta1" name="pregunta1"></td>
+                    </tr>
+                    </table>
+                    </div>
+					<div class="da-img"><img src="imagenes/1.png" alt="image01" /></div>
+                  
+				</div>
+				<div class="da-slide" id="dos">
+                    <div class="da-previo" onClick="previo('pregunta1','uno','dos');" id="previo1" style="display:none"></div>
+					<h2>2.-¿Comó califica la ambientación e higiene del hotel?</h2>
+					<!--<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>-->
+					<div class="da-tabla">
+                    <table width="100%" style="border-collapse:separate;border-spacing:10px;">
+                    <tr>
+                    <td><div class="botones"><a href="#" onClick="pasaslider('pregunta2','Excelente','dos','tres');">Excelente</a></div></td>
+                    <td><div class="botones"><a href="#" onClick="pasaslider('pregunta2','Bueno','dos','tres');">Bueno</a></div></td>
+                    <td><div class="botones"><a href="#" onClick="pasaslider('pregunta2','Malo','dos','tres');">Malo</a></div></td>
+                    <td><input type="hidden" id="pregunta2" name="pregunta2"></td>
+                    </tr>                   
+                    </table>
+                    </div>
+                    <div class="da-img">
+                    
+                            <div id="da-slider2" class="da-slider2">
+                            <div class="da-slide" style="top: -40px !important; width:200px;">
+                                <div class="da-img2"><img src="imagenes/2.png" alt="image01" /></div>
+                            </div>
+                            <div class="da-slide" style="top: -40px !important; width:200px;">
+                                <div class="da-img2"><img src="imagenes/3.png" alt="image01" /></div>
+                            </div>
+                            <div class="da-slide" style="top: -40px !important; width:200px;">
+                                <div class="da-img2"><img src="imagenes/4.png" alt="image01" /></div>
+                            </div>
+                            <div class="da-slide" style="top: -40px !important; width:200px;">
+                                <div class="da-img2"><img src="imagenes/5.png" alt="image01" /></div>
+                            </div>			
+                           </div>
+                    
+                    </div>
+				</div>
+				<div class="da-slide" id="tres">
+                    <div class="da-previo" onClick="previo('pregunta2','dos','tres');" id="previo2" style="display:none"></div>
+					<h2>3.-¿Comodidad/comfort de las habitaciones?</h2>
+					<!--<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>-->					
+                    <div class="da-tabla">
+                    <table width="100%" style="border-collapse:separate;border-spacing:10px;">
+                    <tr>
+                    <td><div class="botones"><a href="#" onClick="pasaslider('pregunta3','Excelente','tres','cuatro');">Excelente</a></div></td>
+                    <td><div class="botones"><a href="#" onClick="pasaslider('pregunta3','Bueno','tres','cuatro');">Bueno</a></div></td>
+                    <td><div class="botones"><a href="#" onClick="pasaslider('pregunta3','Malo','tres','cuatro');">Malo</a></div></td>
+                    <td><input type="hidden" id="pregunta3" name="pregunta3"></td>
+                    </tr>                    
+                    </table>
+                    </div>
+					<div class="da-img"><img src="imagenes/4.png" alt="image01" /></div>
+				</div>
+				<div class="da-slide" id="cuatro">
+                    <div class="da-previo" onClick="previo('pregunta3','tres','cuatro');" id="previo3" style="display:none"></div>
+					<h2 style="width:100% !important;white-space:normal !important;">4.-¿Comó considera nuestros servicios en alimentos y bebidas?</h2>
+					<!--<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>-->					
+                    <div class="da-tabla">
+                    <table width="100%" style="border-collapse:separate;border-spacing:10px;">
+                    <tr>
+                    <td><div class="botones"><a href="#" onClick="pasaslider('pregunta4','Excelente','cuatro','cinco');">Excelente</a></div></td>
+                    <td><div class="botones"><a href="#" onClick="pasaslider('pregunta4','Bueno','cuatro','cinco');">Bueno</a></div></td>
+                    <td><div class="botones"><a href="#" onClick="pasaslider('pregunta4','Malo','cuatro','cinco');">Malo</a></div></td>
+                     <td><input type="hidden" id="pregunta4" name="pregunta4"></td>
+                    </tr>                 
+                    </table>
+                    </div>
+					<div class="da-img">
+                    
+                            <div id="da-slider3" class="da-slider2">
+                            <div class="da-slide" style="top: -40px !important; width:200px;">
+                                <div class="da-img2"><img src="imagenes/bebidas4.png" alt="image01" /></div>
+                            </div>
+                            <div class="da-slide" style="top: -40px !important; width:200px;">
+                                <div class="da-img2"><img src="imagenes/bebidas3.png" alt="image01" /></div>
+                            </div>
+                            <div class="da-slide" style="top: -40px !important; width:200px;">
+                                <div class="da-img2"><img src="imagenes/bebidas2.png" alt="image01" /></div>
+                            </div>
+                            <div class="da-slide" style="top: -40px !important; width:200px;">
+                                <div class="da-img2"><img src="imagenes/bebidas.png" alt="image01" /></div>
+                            </div>			
+                           </div>
+                    
+                    </div>
+				</div>
+                <div class="da-slide" id="cinco">
+                    <div class="da-previo" onClick="previo('pregunta4','cuatro','cinco');" id="previo4" style="display:none"></div>
+					<h2>5.-¿Por qué medio se entero de nosotros?</h2>
+					<!--<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>-->
+                    <div class="da-tabla">
+                    <table width="100%" style="border-collapse:separate;border-spacing:10px;">
+                    <tr>                                       
+<td><div class="botones"><a href="#" onClick="pasaslider('pregunta5','Mail','cinco','seis');">Correo</a></div></td>
+<td><div class="botones"><a href="#" onClick="pasaslider('pregunta5','Web','cinco','seis');">Web</a></div></td>
+<td><div class="botones"><a href="#" onClick="pasaslider('pregunta5','Redes Sociales','cinco','seis');">Redes S.</a></div></td>
+                    </tr>
+                    <tr>
+<td><div class="botones"><a href="#" onClick="pasaslider('pregunta5','Anuncios','cinco','seis');">Anuncios</a></div></td>
+<td><div class="botones"><a href="#" onClick="pasaslider('pregunta5','Recomendacion','cinco','seis');">Recomen.</a></div></td>
+<td><div class="botones"><a href="#" onClick="pasaslider('pregunta5','Otros','cinco','seis');">Otros</a></div></td>
+                    </tr>
+                    <tr>
+                     <td><input  type="hidden" id="pregunta5" name="pregunta5"></td>
+                     </tr>
+                    </table>
+                    </div>
+					 <div class="da-img">
+                    
+                            <div id="da-slider4" class="da-slider2">
+                            <div class="da-slide" style="top: -40px !important; width:200px;">
+                                <div class="da-img2"><img src="imagenes/web.png" alt="image01" /></div>
+                            </div>
+                            <div class="da-slide" style="top: -40px !important; width:200px;">
+                                <div class="da-img2"><img src="imagenes/periodico.png" alt="image01" /></div>
+                            </div>
+                            <div class="da-slide" style="top: -40px !important; width:200px;">
+                                <div class="da-img2"><img src="imagenes/face.png" alt="image01" /></div>
+                            </div>
+                            <!--<div class="da-slide" style="top: -40px !important; width:200px;">
+                                <div class="da-img2"><img src="imagenes/5.png" alt="image01" /></div>
+                            </div>-->			
+                           </div>
+                    
+                    </div>
+				</div>
+                <div class="da-slide" id="seis">
+                    <div class="da-previo" onClick="previo('pregunta5','cinco','seis');" id="previo5" style="display:none"></div>
+					<h2>6.-Sugerencia y/o comentario.</h2>
+				<!--	<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>-->
+                    <div class="da-tabla">
+                    <table width="100%" style="border-collapse:separate;border-spacing:10px;">
+                    <tr>
+                    <td><textarea id="pregunta6" name="pregunta6" class="form-control parsley-validated" rows="6" data-minwords="6" data-required="true" ></textarea></td>
+                    <td><div class="botones"><a href="#" onClick="pasaslider('pregunta6','','seis','siete');">Siguiente</a></div></td>
+                    </tr>
+                    </table>
+                    </div>
+					<div class="da-img"><img src="imagenes/comentarios.png" alt="image01" /></div>                  </div>
+         
+                <div class="da-slide" id="siete">
+                    <div class="da-previo" onClick="previo('pregunta6','seis','siete');" id="previo6" style="display:none"></div>
+					<h2 style="font-size:35px !important;left:5% !important;text-align:center;width:90% !important;">Hotel Artisan les da las gracias</h2>
+				<!--	<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>-->
+					<a href="#" class="da-pregunta1-finaliza" onClick="submitForm();">Finalizar</a>
+					<div class="da-img-fin"><img src="ParallaxContentSlider/images/3.png" alt="image01" /></div>
+				</div>
+                
+
+
+</div>
+</div>
+
+			</div>
+            </div> 
+                
+                
+               
+            </div>
+         
+    
+    
+    
+	</div>              
+	
+</div>
+
+
+
+<div data-role="page" id="page3" data-add-back-btn="true">
+
+<div data-role="content" class="ui-content">
+
+<div class="container" style="min-height: 100%;">
+			<!-- Codrops top bar -->
+            <div class="codrops-top" style="background:none !important;box-shadow:none !important;">
+    <a href="#page" onClick="inicio();"><img src="imagenes/home.png" style="position:absolute;left:5%;top:20px;"></a>
+    <a href="#page3" onClick="consultar();"><img src="imagenes/home.png" style="position:absolute;left:10%;top:20px;"></a>
+             
+                <div class="clr"></div>
+            </div><!--/ Codrops top bar -->
+			<header class="dimenciones-ipad">
+				
+			</header>
+           <div id="cuerpo">
+           <div class="linea"></div>
+           <div class="imagenes-cabecera">
+           <table>
+           <tr>
+           
+           <td><a href="#page2" onClick="registrar();"><img src="imagenes/mexico_flag_256.png" style="margin-bottom:25px;"></a></td>
+           <td><img src="imagenes/logo2.png" id="logo-encuesta" class="sombra-imagen"></td>
+           <td><a href="#"><img src="imagenes/flag_usa.png" style="margin-bottom:25px;"></a></td>
+           </tr>
+           </table>
+           </div>
+           <!--<div class="logo-estados-unidos"><a href="#"><img src="imagenes/flag_usa.png"></a></div>
+           <div class="logo-mexico"><a href="encuesta.html"><img src="imagenes/mexico_flag_256.png" ></a></div>
+           <div class="logo-cabecera"><img src="imagenes/logo2.png" width="70%" class="sombra-imagen"></div>-->
+           <div class="sombra">
+           <div id="carga_loading" class="botonEnviar" style="display:none">Enviando..</div>
+           <a href="#" id="envia" class="botonEnviar" onClick="subirDatos();">Enviar</a>
+			<div id="da-slider" class="da-slider" style="box-shadow: 0px 1px 0px #FE3801, 0px -1px 0px #FE3801;">
+             <center>
+				<div id="tb" style="overflow-y:scroll; overflow-x:visible; height:400px; ">
+                <table id="resultList" class="rwd-table"></table></div>
+                
+			 </center>
+                
+			</div>
+            </div>
+            
+            </div>
+        </div>
+</div>
+</div>
+
+		
+
+
+        <script src="js/datepicker/bootstrap-datepicker.js"></script>
+		<!--<script type="text/javascript" src="ParallaxContentSlider/js/jquery.min.js"></script>-->
+		<script type="text/javascript" src="ParallaxContentSlider/js/jquery.cslider.js"></script>
+		 <script type="text/javascript">
+		 
+			$(function() {
+				
+				$('#da-slider-principal').cslider({
+					autoplay	: true,
+					bgincrement	: 450
+				});
+			
+				$('#da-slider').cslider();
+				
+				$('#da-slider2').cslider({
+					autoplay	: true,
+					bgincrement	: 450
+				});
+				$('#da-slider3').cslider({
+					autoplay	: true,
+					bgincrement	: 450
+				});
+				$('#da-slider4').cslider({
+					autoplay	: true,
+					bgincrement	: 450
+				});
+				
+			});
+		</script>
+
+</body>
+</html>
