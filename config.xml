@@ -1,58 +1,25 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.phonegap.encuestaArtiVer"
-        version   = "3.7.0">
+        version   = "3.7.0"
+		versionCode = "1">
+	<preference name="phonegap-version" value="3.7.0" />
+	
     <name>Encuesta Artisan</name>
 
     <description>
-        Encuesta
+        Encuesta Artisan Playa Esmeralda
     </description>
 
     <author href="http://phonegap.com" email="support@phonegap.com">
         PhoneGap Team
     </author>
 
-    <feature name="http://api.phonegap.com/1.0/device" />
-	<feature name="NetworkStatus">
-    <param name="ios-package" value="CDVConnection" />
-    </feature>
 
-    <preference name="phonegap-version" value="3.7.0" />
-    <preference name="orientation"      value="default" />
-    <preference name="target-device"    value="universal" />
-    
-	
-	 <preference name="permissions"                value="true"/>
-
-    <!-- Customize your app and platform with the preference element. -->
-   <!-- <preference name="phonegap-version"           value="3.5.0" /> -->      
-
-  
-    <preference name="fullscreen"                 value="true" />           
-    <preference name="webviewbounce"              value="true" />           
-    <preference name="prerendered-icon"           value="true" />          
-    <preference name="stay-in-webview"            value="false" />         
-    <preference name="ios-statusbarstyle"         value="black-opaque" />   
-    <preference name="detect-data-types"          value="true" />          
-    <preference name="exit-on-suspend"            value="false" />         
-    <preference name="show-splash-screen-spinner" value="true" />          
-    <preference name="auto-hide-splash-screen"    value="true" />           
-    <preference name="disable-cursor"             value="false" />         
-    <preference name="android-minSdkVersion"      value="7" />             
-    <preference name="android-installLocation"    value="auto" />           
-
-    <!-- Plugins -->
-
-    <!-- Core plugins -->
-	<plugin name="Camera" value="CDVCamera" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-	<gap:plugin name="de.appplant.cordova.plugin.email-composer" version="0.8.1" />
-    <gap:plugin name="org.apache.cordova.battery-status" />
     <gap:plugin name="org.apache.cordova.camera" />
     <gap:plugin name="org.apache.cordova.media-capture" />
     <gap:plugin name="org.apache.cordova.console" />
-    <gap:plugin name="org.apache.cordova.contacts" />
     <gap:plugin name="org.apache.cordova.device" />
     <gap:plugin name="org.apache.cordova.device-motion" />
     <gap:plugin name="org.apache.cordova.device-orientation" />
